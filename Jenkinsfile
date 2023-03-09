@@ -3,9 +3,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                script {
                 def version = '1.0'
                 sh "echo Building version ${version}..."
                 sh 'echo "Building..."'
+                }
             }
         }
         stage('Test') {
