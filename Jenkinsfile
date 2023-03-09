@@ -13,11 +13,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                def params = [
+                def params=[
                     new StringParameterValue('para1', 'value1'),
                     new StringParameterValue('para2', 'value2'),
                 ]
-                def jobName = 'my-other-job'
+                def jobName='my-other-job'
                 build job: jobName, parameters: params
             }
         }
