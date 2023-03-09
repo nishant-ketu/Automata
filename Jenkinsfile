@@ -3,6 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                def version = '1.0'
+                sh "echo Building version ${version}..."
                 sh 'echo "Building..."'
             }
         }
